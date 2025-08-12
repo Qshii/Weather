@@ -1,0 +1,230 @@
+/* Base Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right top, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Container */
+.weather-container {
+  background: #ffffff20;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Header and Form */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 60%;
+  min-width: 200px;
+}
+
+button {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e67e22;
+}
+
+.error {
+  color: #ffb3b3;
+  margin-top: 10px;
+}
+
+/* Weather Card Styling */
+.weather-card {
+  background: #ffffff;
+  color: #333;
+  padding: 20px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.top-section h2 {
+  margin: 0;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Temperature */
+.weather-card h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+/* Weather Details Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  font-size: 15px;
+  color: #444;
+}
+
+.grid div {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid div .label {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.grid div .value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d9d78; /* Default color */
+}
+
+/* Styling for specific weather details */
+.grid div.wind {
+  background: #e3f2fd; /* Light Blue */
+  color: #1e88e5; /* Blue for wind speed */
+}
+
+.grid div.wind .value {
+  color: #1976d2; /* A darker blue for wind value */
+}
+
+.grid div.feels-like {
+  background: #ffe0b2; /* Light Orange */
+  color: #f57c00; /* Orange color for feels like */
+}
+
+.grid div.feels-like .value {
+  color: #d35400; /* Darker orange for feels like */
+}
+
+.grid div.humidity {
+  background: #dcedc8; /* Light Green */
+  color: #388e3c; /* Dark Green for humidity */
+}
+
+.grid div.humidity .value {
+  color: #2e7d32; /* Darker green for humidity value */
+}
+
+.grid div.sun {
+  background: #ffeb3b; /* Light Yellow */
+  color: #fbc02d; /* Dark Yellow for sun times */
+}
+
+.grid div.sun .value {
+  color: #f57f17; /* Darker yellow for sun times */
+}
+
+/* Optional: Add specific hover effect */
+.grid div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Weekly Forecast Section */
+.forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.forecast h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+}
+
+.forecast-day .day {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.forecast-day .temp {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.forecast-day .desc {
+  font-size: 0.85rem;
+  color: #ddd;
+}
